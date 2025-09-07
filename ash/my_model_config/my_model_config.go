@@ -9,5 +9,5 @@ var MyModelName string
 func init() {
 	MyApiKey = os.Getenv("APIKey")
 	MyBaseURL = "https://api.vveai.com/v1"
-	MyModelName = "gpt-4.1-mini"
+	MyModelName = "gpt-5"
 }

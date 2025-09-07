@@ -7,12 +7,16 @@ import (
 	"github.com/cloudwego/eino/schema"
 )
 
-func AddTodoFunc(_ context.Context, params map[string]any) (map[string]any, error) {
-	// add todoList item
-	return nil, nil
+func AddTodoFunc(_ context.Context, params map[string]any) (string, error) {
+	// Mock 处理逻辑
+	return `{"msg": "add todo success"}`, nil
 }
 
-func GetAddTodoTool() tool.InvokableTool {
+// AddTodoTool
+// 这种方式虽然直观，但存在一个明显的缺点：需要在 ToolInfo 中手动定义参数信息（ParamsOneOf），
+// 和实际的参数结构（TodoAddParams）是分开定义的。这样不仅造成了代码的冗余，
+// 而且在参数发生变化时需要同时修改两处地方，容易导致不一致，维护起来也比较麻烦。
+func AddTodoTool() tool.InvokableTool {
 	// 工具信息
 	toolInfo := &schema.ToolInfo{
 		Name: "add_todo",
