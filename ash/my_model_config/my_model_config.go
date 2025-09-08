@@ -7,7 +7,7 @@ var MyBaseURL string
 var MyModelName string
 
 func init() {
-	MyApiKey = os.Getenv("APIKey")
+	MyApiKey = os.Getenv("OPENAI_API_KEY")
 	MyBaseURL = "https://api.vveai.com/v1"
 	MyModelName = "gpt-5"
 }

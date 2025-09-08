@@ -63,7 +63,8 @@ func main() {
 	}
 
 	// 使用解析器
-	filePath := "./testdata/test.html"
+	//filePath := "./components/document/parser/extparser/testdata/test.html"
+	filePath := "./components/document/parser/extparser/testdata/test.pdf"
 	file, err := os.Open(filePath)
 	if err != nil {
 		logs.Errorf("os.Open failed, file=%v, err=%v", filePath, err)
