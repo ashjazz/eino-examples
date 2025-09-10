@@ -9,7 +9,7 @@ var EmbeddingModelName string
 
 func init() {
 	ApiKey = os.Getenv("OPENAI_API_KEY")
-	ModelName = "https://api.vveai.com/v1"
-	BaseURL = "gpt-5"
+	ModelName = "gpt-5"
+	BaseURL = "https://api.vveai.com/v1"
 	EmbeddingModelName = "text-embedding-3-large"
 }
